@@ -37,7 +37,7 @@ jobs:
         run: |
           git ls-files '*.toml' -z | xargs -0 docker run --rm -v "$PWD:/work" \
           -w /work tamasfe/taplo:0.10.0 fmt --check
+      - name: just
+        uses: extractions/setup-just@v3
       - name: justlint
-        run: |
-          curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh
-          just --fmt --check
+        run: just --fmt --check
