@@ -19,6 +19,6 @@ setup target:
     esac
 format:
     cargo fmt --all
-    markdownlint --fix "**/*.md"
+    markdownlint --fix ./README.md .github/README.md
     yamlfmt '**/*.yml'
     taplo fmt

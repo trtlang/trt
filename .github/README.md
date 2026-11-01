@@ -11,8 +11,8 @@ contributions are welcome
 
 simply run `just setup macos`
 
-if you don't have `just`, you can get it with `brew install just` or 
+if you don't have `just`, you can get it with `brew install just` or
 `sudo apt install just`
 
-all commands are usually ran with `just`, see `./justfile` for everything you 
+all commands are usually ran with `just`, see `./justfile` for everything you
 can do
