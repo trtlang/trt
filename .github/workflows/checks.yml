@@ -40,4 +40,4 @@ jobs:
       - name: justlint
         run: |
           sudo apt install just
-          just --check
+          just --fmt --check
