@@ -4,7 +4,12 @@ version = "0.0.0"
 edition = "2024"
 authors = ["Alejandro Vaz <alejandro.vaz.myt@gmail.com>"]
 default-run = "trt"
-categories = ["development-tools", "parser-implementations", "parsing", "algorithms"]
+categories = [
+    "development-tools", 
+    "parser-implementations", 
+    "parsing", 
+    "algorithms"
+]
 keywords = [
     "programming language",
     "compiler",
