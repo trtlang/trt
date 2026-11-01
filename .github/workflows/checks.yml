@@ -37,3 +37,7 @@ jobs:
         run: |
           git ls-files '*.toml' -z | xargs -0 docker run --rm -v "$PWD:/work" \
           -w /work tamasfe/taplo:0.10.0 fmt --check
+      - name: justlint
+        run: |
+          sudo apt install just
+          just --check
