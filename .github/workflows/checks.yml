@@ -40,4 +40,4 @@ jobs:
       - name: justlint
         run: |
           sudo apt install just
-          just --fmt --check
+          just --unstable --fmt --check
