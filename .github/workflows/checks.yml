@@ -39,5 +39,5 @@ jobs:
           -w /work tamasfe/taplo:0.10.0 fmt --check
       - name: justlint
         run: |
-          sudo apt install just
-          just --unstable --fmt --check
+          curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh
+          just --fmt --check
