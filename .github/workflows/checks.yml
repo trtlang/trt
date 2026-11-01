@@ -11,6 +11,20 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v7
+      - name: install
+        uses: dtolnay/rust-toolchain@nightly
+      - name: style
+        run: |
+          rustup component add rustfmt
+          cargo fmt --all --check
+      - name: clippy
+        run: |
+          rustup component add clippy
+          cargo clippy
+      - name: documentation
+        run: cargo doc
+      - name: package
+        run: cargo package
       - name: markdownlint
         run: |
             git ls-files '*.md' -z | xargs -0 docker run --rm -v "$PWD:/work" \
