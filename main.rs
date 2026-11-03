@@ -1,6 +1,11 @@
-#![allow(missing_docs)]
-#![deny(unused, deprecated, unreachable_code, nonstandard_style)]
-#![forbid(
+#![doc = include_str!("./README.md")]
+#![deny(
+    unused, 
+    deprecated, 
+    unreachable_code, 
+    nonstandard_style, 
+    clippy::all,
+    warnings,
     missing_debug_implementations,
     dropping_copy_types,
     dropping_references,
@@ -22,7 +27,9 @@
     trivial_casts,
     unknown_lints,
     arithmetic_overflow,
-    type_alias_bounds
+    missing_docs,
+    type_alias_bounds,
+    rustdoc::all
 )]
 
 mod command;
@@ -38,7 +45,7 @@ use {
 };
 
 fn main() -> Result<()> {
-    return match Command::parse() {
+    match Command::parse() {
         Command::Build {
             directory
         } => {
@@ -47,6 +54,9 @@ fn main() -> Result<()> {
             dbg!(&manifest);
             todo!()
         }
-        Command::Version => Result::Ok(println!("TRT v{}", env!("CARGO_PKG_VERSION")))
-    };
+        Command::Version => {
+            println!("TRT v{}", env!("CARGO_PKG_VERSION"));
+            Result::Ok(())
+        }
+    }
 }
