@@ -1,7 +1,5 @@
 use {
-    clap::{
-        Parser
-    },
+    clap::Parser,
     std::path::PathBuf
 };
 
