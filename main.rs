@@ -38,7 +38,7 @@ use {
 };
 
 fn main() -> Result<()> {
-    match Command::parse() {
+    return match Command::parse() {
         Command::Build {
             directory
         } => {
@@ -46,6 +46,7 @@ fn main() -> Result<()> {
                 from_str::<Manifest>(read_to_string(directory.join("manifest.toml"))?.as_str())?;
             dbg!(&manifest);
             todo!()
-        }
-    };
+        },
+        Command::Version => Result::Ok(println!("TRT v{}", env!("CARGO_PKG_VERSION")))
+    }
 }
