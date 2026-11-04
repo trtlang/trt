@@ -25,6 +25,7 @@ setup:
 
 # build and install the local development trt
 install:
+    cargo clean
     cargo install --path .
 
 # shows statistics about the current trt
