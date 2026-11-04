@@ -96,5 +96,4 @@ built = { version = "0.8", features = [
 ] }
 
 [package.metadata.docs.rs]
-all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
