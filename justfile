@@ -28,7 +28,7 @@ install:
     cargo install --path .
 
 # shows statistics about the current trt
-stat: install
+stat:
     trt version
     stat -f%z "$HOME/.cargo/bin/trt" | xargs -I{} echo "Binary size: {}B"
 
