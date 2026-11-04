@@ -94,3 +94,6 @@ built = { version = "0.8", features = [
   "gix",
   "semver",
 ] }
+
+[package.metadata.docs.rs]
+rustdoc-args = ["--cfg", "docsrs"]
